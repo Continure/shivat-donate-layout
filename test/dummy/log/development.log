@@ -946,3 +946,19 @@ Started GET "/service-worker.js" for ::1 at 2026-03-18 12:07:40 +0200
   
 ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
   
+Started GET "/" for ::1 at 2026-03-18 12:25:36 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Dummy'*/[0m
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered /Users/egor/Desktop/work/shivat-donate-layout/app/views/shivat_donate_layout/shared/_donate_header.html.erb (Duration: 3.0ms | GC: 0.0ms)
+  Rendered /Users/egor/Desktop/work/shivat-donate-layout/app/views/shivat_donate_layout/shared/_donate_footer.html.erb (Duration: 1.4ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | GC: 11.1ms)
+Completed 200 OK in 39ms (Views: 28.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 17.0ms)
+
+
+Started GET "/service-worker.js" for ::1 at 2026-03-18 12:25:38 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
