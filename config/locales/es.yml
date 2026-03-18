@@ -9,6 +9,7 @@ es:
     explore: "Explorar"
     get_in_touch: "Contacto"
     donate: "Donar"
+    donate_btn_url: "https://donate.shivat-zion.com/?locale=es"    
     url_about_us: "https://shivat-zion.com/es/nosotros/"
     url_aliyah_einstein: "https://shivat-zion.com/es/portal-de-informacion/"
     url_faqs: "https://shivat-zion.com/es/faq/"
