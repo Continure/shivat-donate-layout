@@ -14,6 +14,12 @@ module ShivatDonateLayout
       app.config.paths["app/views"] << root.join("app", "views")
     end
 
+    initializer "shivat_donate_layout.action_controller_view_paths" do |app|
+      app.config.after_initialize do
+        ActionController::Base.prepend_view_path ShivatDonateLayout::Engine.root.join("app", "views")
+      end
+    end
+
     initializer "shivat_donate_layout.i18n" do |app|
       app.config.i18n.load_path += Dir[root.join("config", "locales", "**", "*.yml")]
     end
