@@ -20,12 +20,36 @@ bundle install
 
 ## Usage
 
-### In your layout or view
+### 1. Подключите хелперы в `ApplicationHelper`
+
+```ruby
+# app/helpers/application_helper.rb
+require "shivat_donate_layout/application_helper"
+
+module ApplicationHelper
+  include ShivatDonateLayout::ApplicationHelper
+end
+```
+
+### 2. Добавьте шапку и футер в layout
 
 ```erb
-<%= render "shared/donate_header" %>
+<!-- app/views/layouts/application.html.erb -->
+<body>
+  <%= shivat_donate_layout_header %>
+  <main>
+    <%= yield %>
+  </main>
+  <%= shivat_donate_layout_footer %>
+</body>
+```
+
+Альтернатива — прямой рендер партиалов (подключение хелперов в `ApplicationHelper` всё равно обязательно):
+
+```erb
+<%= render "shivat_donate_layout/shared/donate_header" %>
 <%= yield %>
-<%= render "shared/donate_footer" %>
+<%= render "shivat_donate_layout/shared/donate_footer" %>
 ```
 
 ### Routes
@@ -42,9 +66,9 @@ If your routes use different names, configure in an initializer:
 
 ```ruby
 # config/initializers/shivat_donate_layout.rb
-ShivatDonateLayout.configure do |config|
-  config.root_path = "/"           # default
-  config.donate_path = "/donate"  # default
+ShivatDonateLayout.configure do |c|
+  c.root_path = "/"           # default
+  c.donate_path = "/donate"   # default
 end
 ```
 
@@ -78,13 +102,24 @@ config.i18n.default_locale = :en
 
 And a route or controller action to handle locale changes (e.g. `update_locale`).
 
+## Development
+
+Для локальной разработки без коммитов используйте dummy-приложение:
+
+```bash
+cd test/dummy
+bundle install
+bin/rails server -p 3001
+```
+
+Откройте http://localhost:3001/donate — гем подключён через `path: "../.."`, изменения в views и assets видны сразу.
+
 ## Customization
 
-- **Override partials**: Create `app/views/shared/_donate_header.html.erb` or `_donate_footer.html.erb` in your app to override the gem's defaults.
+- **Override partials**: Create `app/views/shivat_donate_layout/shared/_donate_header.html.erb` or `_donate_footer.html.erb` in your app to override the gem's defaults.
 - **Override locales**: Add nav/footer/header keys to your locale files.
 - **Override assets**: Replace images in your app's assets if needed (the gem uses `shivat_donate_layout/` prefix for its images).
 
 ## License
 
 Proprietary - Shivat Zion
-# shivat-donate-layout

@@ -2,6 +2,14 @@
 
 module ShivatDonateLayout
   module ApplicationHelper
+    def shivat_donate_layout_header
+      render partial: "shivat_donate_layout/shared/donate_header"
+    end
+
+    def shivat_donate_layout_footer
+      render partial: "shivat_donate_layout/shared/donate_footer"
+    end
+
     def shivat_donate_layout_root_path
       if respond_to?(:root_path)
         root_path

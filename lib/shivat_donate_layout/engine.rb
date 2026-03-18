@@ -9,9 +9,10 @@ module ShivatDonateLayout
       app.config.assets.paths << root.join("app", "assets", "images")
     end
 
-    initializer "shivat_donate_layout.helpers" do
-      ActiveSupport.on_load(:action_view) do
-        include ShivatDonateLayout::ApplicationHelper
+    initializer "shivat_donate_layout.helpers" do |app|
+      app.config.to_prepare do
+        ActionView::Base.include(ShivatDonateLayout::ApplicationHelper)
+        ApplicationController.helper(ShivatDonateLayout::ApplicationHelper) if defined?(ApplicationController)
       end
     end
 
