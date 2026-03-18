@@ -1,0 +1,32 @@
+es:
+  nav:
+    about_us: "Sobre Nosotros"
+    aliyah_einstein: "Aliá & Vida en Israel"
+    faqs: "FAQs"
+    pro_match: "Lista de Profesionale"
+    news: "Noticias"
+    help_center: "Contacto"
+    explore: "Explorar"
+    get_in_touch: "Contacto"
+    donate: "Donar"
+    url_about_us: "https://shivat-zion.com/es/nosotros/"
+    url_aliyah_einstein: "https://shivat-zion.com/es/portal-de-informacion/"
+    url_faqs: "https://shivat-zion.com/es/faq/"
+    url_pro_match: "https://shivat-zion.com/es/lista-de-profesionale/"
+    url_news: "https://shivat-zion.com/news/"
+    url_help_center: "https://shivat-zion.com/es/contacto/"
+
+  footer:
+    terms_privacy: "Términos y política de privacidad"
+    url_terms_privacy: "https://shivat-zion.com/es/terms-privacy-policy/"
+    all_rights_reserved: "© %{year} Shivat Zion. Todos los derechos reservados."
+    explore: "Explorar"
+    connect: "Conectar"
+    get_in_touch: "Contacto"
+    facebook: "Facebook"
+    tiktok: "TikTok"
+    linkedin: "LinkedIn"
+    instagram: "Instagram"
+
+  header:
+    open_menu: "Abrir menú"

@@ -1,0 +1,32 @@
+he:
+  nav:
+    about_us: "אודותינו"
+    aliyah_einstein: "עלייה וחיים בישראל"
+    faqs: "שאלות נפוצות"
+    pro_match: "מדריך מקצועי"
+    news: "חדשות"
+    help_center: "צור קשר"
+    explore: "גלה"
+    get_in_touch: "צור קשר"
+    donate: "תרמו"
+    url_about_us: "https://shivat-zion.com/about-shivat-zion/"
+    url_aliyah_einstein: "https://shivat-zion.com/information-portal/"
+    url_faqs: "https://shivat-zion.com/faq/"
+    url_pro_match: "https://shivat-zion.com/professional-directory/"
+    url_news: "https://shivat-zion.com/news/"
+    url_help_center: "https://shivat-zion.com/contact-us/"
+
+  footer:
+    terms_privacy: "תנאים ומדיניות פרטיות"
+    url_terms_privacy: "https://shivat-zion.com/terms-privacy-policy"
+    all_rights_reserved: "© %{year} שיבת ציון. כל הזכויות שמורות."
+    explore: "גלה"
+    connect: "התחבר"
+    get_in_touch: "צור קשר"
+    facebook: "פייסבוק"
+    tiktok: "טיקטוק"
+    linkedin: "לינקדאין"
+    instagram: "אינסטגרם"
+
+  header:
+    open_menu: "פתח תפריט"

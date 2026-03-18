@@ -1,0 +1,152 @@
+<style>
+  .donate-site-footer * { box-sizing: border-box; }
+  .donate-site-footer a { text-decoration: none; }
+  .donate-site-footer img { max-width: 100%; height: auto; vertical-align: top; }
+
+  .donate-site-footer {
+    --Black: #101010;
+    --Primary: #2D8CD1;
+    --White: #FFF;
+    --Body-text: #444;
+    --Cards: #F8F8F8;
+    background: var(--Cards);
+    font-family: "Instrument Sans", sans-serif;
+  }
+
+  .donate-site-footer .content {
+    display: flex;
+    max-width: 1920px;
+    padding: 40px 60px;
+    margin: 0 auto;
+  }
+
+  .donate-site-footer .col-f {
+    display: flex;
+    flex-direction: column;
+    margin-right: 340px;
+  }
+
+  .donate-site-footer .col-f .logo {
+    width: 150px;
+    height: 66px;
+    margin-bottom: 32px;
+    object-fit: contain;
+  }
+
+  .donate-site-footer .col-f .link {
+    color: var(--Body-text);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 120%;
+    margin-bottom: 12px;
+  }
+
+  .donate-site-footer .col-f .c {
+    color: #101010;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 120%;
+  }
+
+  .donate-site-footer .links-col {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+  }
+
+  .donate-site-footer .links-col .col-title {
+    margin-bottom: 16px;
+    color: #101010;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 95%;
+  }
+
+  .donate-site-footer .links-col a {
+    color: var(--Black);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 120%;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .donate-site-footer .links-col a:hover { color: #7E7E7E; }
+
+  .donate-site-footer .links-col a:not(:last-of-type) { margin-bottom: 8px; }
+
+  @media screen and (max-width: 1599px) {
+    .donate-site-footer .col-f { margin-right: 120px; }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .donate-site-footer .content {
+      padding: 40px 20px;
+      flex-wrap: wrap;
+    }
+    .donate-site-footer .col-f {
+      margin-right: auto;
+      width: 100%;
+      order: 10;
+      margin-top: 60px;
+    }
+    .donate-site-footer .links-col a { font-size: 14px; }
+    .donate-site-footer .links-col:not(:last-of-type) { margin-right: 60px; }
+  }
+
+  @media screen and (max-width: 479px) {
+    .donate-site-footer .content {
+      padding: 40px 10px 0;
+      gap: 20px;
+    }
+    .donate-site-footer .col-f {
+      margin: 0 0 0 10px;
+      width: calc(100% - 20px);
+      order: 5;
+    }
+    .donate-site-footer .col-s { order: 4; }
+    .donate-site-footer .links-col:not(:last-of-type) { margin-right: 0; }
+    .donate-site-footer .links-col { width: max-content; height: max-content; }
+    .donate-site-footer .links-col .col-title { margin-bottom: 12px; font-size: 11px; }
+    .donate-site-footer .col-f .logo {
+      order: 3;
+      width: 100%;
+      height: auto;
+      margin-top: 40px;
+      max-width: 120px;
+    }
+    .donate-site-footer .col-f .c { max-width: 137px; font-size: 14px; }
+    .donate-site-footer .col-f .link { font-size: 14px; }
+  }
+</style>
+
+<footer class="donate-site-footer">
+  <div class="content">
+    <section class="col-f">
+      <%= image_tag shivat_donate_layout_image_path("header_logo.svg"), class: "logo", alt: "Shivat Zion", style: "max-width: 150px;" %>
+      <%= link_to t('footer.terms_privacy'), t('footer.url_terms_privacy'), class: "link" %>
+      <p class="c"><%= t('footer.all_rights_reserved', year: Date.current.year) %></p>
+    </section>
+    <section class="links-col col-s">
+      <p class="col-title"><%= t('footer.explore') %></p>
+      <%= link_to t('nav.about_us'), t('nav.url_about_us') %>
+      <%= link_to t('nav.aliyah_einstein'), t('nav.url_aliyah_einstein') %>
+      <%= link_to t('nav.faqs'), t('nav.url_faqs') %>
+      <%= link_to t('nav.pro_match'), t('nav.url_pro_match') %>
+      <% if I18n.locale == :en %>
+        <%= link_to t('nav.news'), t('nav.url_news') %>
+      <% end %>
+      <%= link_to t('nav.help_center'), t('nav.url_help_center') %>
+    </section>
+    <section class="links-col col-t">
+      <p class="col-title"><%= t('footer.connect') %></p>
+      <%= link_to t('footer.facebook'), "https://www.facebook.com/p/Shivat-Zion-Aliyah-Klita-100077800172568/" %>
+      <%= link_to t('footer.tiktok'), "https://www.tiktok.com/@shivat.zion.aliya" %>
+      <%= link_to t('footer.linkedin'), "https://www.instagram.com/shivat_zion/" %>
+      <%= link_to t('footer.instagram'), "https://www.linkedin.com/company/shivat-zion-aliyah-klita/" %>
+    </section>
+    <section class="links-col col-fo">
+      <p class="col-title"><%= t('footer.get_in_touch') %></p>
+      <%= link_to t('nav.help_center'), t('nav.url_help_center') %>
+    </section>
+  </div>
+</footer>

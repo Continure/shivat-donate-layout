@@ -1,0 +1,32 @@
+nl:
+  nav:
+    about_us: "Over ons"
+    aliyah_einstein: "Aliyah & Leven in Israël"
+    faqs: "FAQs"
+    pro_match: "Professionals-register"
+    news: "Nieuws"
+    help_center: "Contact"
+    explore: "Ontdek"
+    get_in_touch: "Neem contact op"
+    donate: "Doneren"
+    url_about_us: "https://shivat-zion.com/nl/over-shivat-zion/"
+    url_aliyah_einstein: "https://shivat-zion.com/nl/informatieportaal/"
+    url_faqs: "https://shivat-zion.com/nl/faq/"
+    url_pro_match: "https://shivat-zion.com/nl/professionals-register/"
+    url_news: "https://shivat-zion.com/news"
+    url_help_center: "https://shivat-zion.com/nl/contact/"
+
+  footer:
+    terms_privacy: "Voorwaarden & Privacybeleid"
+    url_terms_privacy: "https://shivat-zion.com/nl/terms-privacy-policy/"
+    all_rights_reserved: "© %{year} Shivat Zion. Alle rechten voorbehouden."
+    explore: "Ontdek"
+    connect: "Verbinden"
+    get_in_touch: "Neem contact op"
+    facebook: "Facebook"
+    tiktok: "TikTok"
+    linkedin: "LinkedIn"
+    instagram: "Instagram"
+
+  header:
+    open_menu: "Menu openen"

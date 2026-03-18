@@ -1,0 +1,385 @@
+<style>
+  .donate-site-header * { box-sizing: border-box; }
+  .donate-site-header a { text-decoration: none; }
+  .donate-site-header img { max-width: 100%; height: auto; vertical-align: top; }
+
+  .donate-site-header {
+    --Black: #101010;
+    --Primary: #2D8CD1;
+    --White: #FFF;
+    --Orange: #FF7B00;
+    display: flex;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    align-items: center;
+    height: 90px;
+    padding: 0 60px;
+    z-index: 50;
+    background: #FFF;
+    font-family: "Instrument Sans", sans-serif;
+  }
+
+  .donate-site-header .logo-link {
+    margin-right: auto;
+    width: 114px;
+    height: 50px;
+  }
+
+  .donate-site-header .logo-link .logo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .donate-site-header .nav-menu {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .donate-site-header .nav-menu a {
+    color: var(--Black);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .donate-site-header .nav-menu a:hover { color: #7E7E7E; }
+
+  .donate-site-header .search-btn {
+    margin-right: 52px;
+    color: var(--Black);
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .donate-site-header .search-btn:hover { color: #7E7E7E; }
+
+  .donate-site-header .lang-switcher {
+    position: relative;
+    cursor: pointer;
+    height: max-content;
+  }
+
+  .donate-site-header .lang-switcher .curr {
+    color: var(--Black);
+    font-size: 16px;
+    font-weight: 500;
+    min-width: 100%;
+    margin: 0;
+    padding: 4px;
+    border-bottom: 1px solid #D9E6F0;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .donate-site-header .lang-switcher .curr:hover { background: #D9E6F0; }
+
+  .donate-site-header .lang-switcher .other {
+    min-width: 30px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    z-index: 200;
+    transform-origin: top;
+    transform: scaleY(0);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.2s ease 0.1s;
+    pointer-events: none;
+  }
+
+  .donate-site-header .lang-switcher .other.active {
+    transform: scaleY(1);
+    opacity: 1;
+    background: #fff;
+    pointer-events: auto;
+  }
+
+  .donate-site-header .lang-switcher .other .lang {
+    display: block;
+    height: max-content;
+    color: var(--Black);
+    font-size: 16px;
+    font-weight: 500;
+    padding: 4px;
+    min-width: 100%;
+    width: max-content;
+    text-align: center;
+    border-bottom: 1px solid #D9E6F0;
+    transition: background 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .donate-site-header .lang-switcher .other .lang:hover { background: #D9E6F0; }
+
+  .donate-site-header .lang-switcher .flag-icon {
+    width: 20px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 4px;
+  }
+
+  .donate-site-header .donate-btn { margin-left: 40px; }
+
+  .donate-site-header .orange-button {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    border-radius: 50px;
+    padding: 10px 20px;
+    border: 1px solid #FF7B00;
+    color: var(--Black);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 120%;
+    width: max-content;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .donate-site-header .orange-button:hover {
+    background: var(--Orange);
+    color: #fff;
+  }
+
+  .donate-site-header .orange-button .active { display: none; }
+  .donate-site-header .orange-button:hover .default { display: none; }
+  .donate-site-header .orange-button:hover .active { display: inline-block; }
+
+  .donate-site-header .menu-btn {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  .donate-site-header .menu-btn > * { width: 25px; height: auto; }
+  .donate-site-header .menu-btn .active { display: none; }
+  .donate-site-header .menu-btn.open .default { display: none; }
+  .donate-site-header .menu-btn.open .active { display: block; }
+
+  .donate-site-header .menu { display: none; }
+
+  @media screen and (max-width: 1599px) {
+    .donate-site-header { padding: 0 40px; }
+  }
+
+  @media screen and (max-width: 1279px) {
+    .donate-site-header .search-btn { margin-right: 20px; }
+    .donate-site-header .donate-btn { margin-left: 0; }
+    .donate-site-header .nav-menu,
+    .donate-site-header > .lang-switcher { display: none !important; }
+    .donate-site-header { position: relative; padding: 0 20px; }
+
+    .donate-site-header .menu-btn {
+      display: flex;
+      margin-left: 30px;
+    }
+
+    .donate-site-header .menu {
+      display: flex;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      min-width: 100vw;
+      background: #fff;
+      padding: 30px 20px 60px;
+      z-index: 150;
+      transform-origin: top;
+      transform: scaleY(0);
+      opacity: 0;
+      transition: transform 0.3s ease, opacity 0.2s ease;
+      pointer-events: none;
+    }
+
+    .donate-site-header .menu.open {
+      transform: scaleY(1);
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .donate-site-header .menu .lang-switcher { margin-right: 138px; }
+    .donate-site-header .menu .col { display: flex; flex-direction: column; }
+    .donate-site-header .menu .col:not(:last-of-type) { margin-right: 80px; }
+    .donate-site-header .menu .col .col-title {
+      margin-bottom: 16px;
+      color: #101010;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 120%;
+    }
+    .donate-site-header .menu .col .link {
+      color: #101010;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 120%;
+      transition: color 0.3s ease-in-out;
+    }
+    .donate-site-header .menu .col .link:hover { color: #7E7E7E; }
+    .donate-site-header .menu .col .link:not(:last-of-type) { margin-bottom: 10px; }
+    .donate-site-header .menu .col .btn { margin-top: 24px; }
+  }
+
+  @media screen and (max-width: 767px) {
+    .donate-site-header > .search-btn { display: none; }
+    .donate-site-header { padding: 0 10px; }
+    .donate-site-header .menu .search-btn {
+      font-size: 24px;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      gap: 20px;
+    }
+    .donate-site-header .menu .search-btn:first-of-type { margin-bottom: 24px; }
+    .donate-site-header .menu.open {
+      height: calc(100vh - 60px);
+      flex-direction: column;
+    }
+    .donate-site-header .menu .lang-switcher {
+      width: max-content;
+      margin-right: 0;
+      margin-bottom: 40px;
+    }
+    .donate-site-header .menu .lang-switcher .other { background: #fff; }
+    .donate-site-header .menu .col:not(:last-of-type) { margin-right: 0; order: 1; }
+    .donate-site-header .menu .col:not(:first-of-type) {
+      margin-right: 0;
+      margin-bottom: 24px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid #EAF1F6;
+    }
+  }
+</style>
+
+<header class="donate-site-header">
+  <%= link_to shivat_donate_layout_root_path, class: "logo-link" do %>
+    <%= image_tag shivat_donate_layout_image_path("header_logo.svg"), class: "logo", alt: "Shivat Zion" %>
+  <% end %>
+
+  <nav class="nav-menu">
+    <%= link_to t('nav.about_us'), t('nav.url_about_us') %>
+    <%= link_to t('nav.aliyah_einstein'), t('nav.url_aliyah_einstein') %>
+    <%= link_to t('nav.faqs'), t('nav.url_faqs') %>
+    <%= link_to t('nav.pro_match'), t('nav.url_pro_match') %>
+    <% if I18n.locale == :en %>
+      <%= link_to t('nav.news'), t('nav.url_news') %>
+    <% end %>
+    <%= link_to t('nav.help_center'), t('nav.url_help_center') %>
+  </nav>
+
+  <% locale_flag = { en: "en", nl: "nl", he: "he", de: "de", es: "es", pt: "br", it: "it" } %>
+  <div class="lang-switcher" data-lang-switcher>
+    <p class="curr">
+      <%= image_tag shivat_donate_layout_image_path("flags/#{locale_flag[I18n.locale] || I18n.locale}.svg"), alt: "#{I18n.locale} flag", class: "flag-icon" %>
+      <%= I18n.locale.to_s.upcase %>
+    </p>
+    <div class="other">
+      <% I18n.available_locales.each do |locale| %>
+        <%= link_to url_for(locale: locale), class: "lang" do %>
+          <%= image_tag shivat_donate_layout_image_path("flags/#{locale_flag[locale] || locale}.svg"), alt: "#{locale} flag", class: "flag-icon" %>
+          <%= locale.to_s.upcase %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+  <%= link_to shivat_donate_layout_donate_path, class: "donate-btn orange-button" do %>
+    <%= t('nav.donate') %>
+    <%= image_tag shivat_donate_layout_image_path("donate-heart.svg"), class: "default", alt: "" %>
+    <%= image_tag shivat_donate_layout_image_path("donate-heart-active.svg"), class: "active", alt: "" %>
+  <% end %>
+
+  <button type="button" class="menu-btn" aria-label="<%= t('header.open_menu') %>">
+    <svg class="default" viewBox="0 0 24 24" fill="currentColor" width="25" height="25"><path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/></svg>
+    <%= image_tag shivat_donate_layout_image_path("menu-btn-active.svg"), class: "active", alt: "" %>
+  </button>
+
+  <div class="menu">
+    <% locale_flag = { en: "en", nl: "nl", he: "he", de: "de", es: "es", pt: "br", it: "it" } %>
+    <div class="lang-switcher" data-lang-switcher>
+      <p class="curr">
+        <%= image_tag shivat_donate_layout_image_path("flags/#{locale_flag[I18n.locale] || I18n.locale}.svg"), alt: "#{I18n.locale} flag", class: "flag-icon" %>
+        <%= I18n.locale.to_s.upcase %>
+      </p>
+      <div class="other">
+        <% I18n.available_locales.each do |locale| %>
+          <%= link_to url_for(locale: locale), class: "lang" do %>
+            <%= image_tag shivat_donate_layout_image_path("flags/#{locale_flag[locale] || locale}.svg"), alt: "#{locale} flag", class: "flag-icon" %>
+            <%= locale.to_s.upcase %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+    <div class="col">
+      <h3 class="col-title"><%= t('nav.explore') %></h3>
+      <%= link_to t('nav.about_us'), t('nav.url_about_us'), class: "link" %>
+      <%= link_to t('nav.aliyah_einstein'), t('nav.url_aliyah_einstein'), class: "link" %>
+      <%= link_to t('nav.faqs'), t('nav.url_faqs'), class: "link" %>
+      <%= link_to t('nav.pro_match'), t('nav.url_pro_match'), class: "link" %>
+      <% if I18n.locale == :en %>
+        <%= link_to t('nav.news'), t('nav.url_news'), class: "link" %>
+      <% end %>
+      <%= link_to t('nav.help_center'), t('nav.url_help_center'), class: "link" %>
+    </div>
+    <div class="col">
+      <h3 class="col-title"><%= t('nav.get_in_touch') %></h3>
+      <%= link_to t('nav.help_center'), t('nav.url_help_center'), class: "link" %>
+    </div>
+  </div>
+</header>
+
+<script>
+(function() {
+  var header = document.querySelector('.donate-site-header');
+  if (!header) return;
+  var btn = header.querySelector('.menu-btn');
+  var menu = header.querySelector('.menu');
+  if (btn && menu) {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      btn.classList.toggle('open');
+      menu.classList.toggle('open');
+    });
+    document.addEventListener('click', function(e) {
+      if (!menu.contains(e.target) && !btn.contains(e.target)) {
+        btn.classList.remove('open');
+        menu.classList.remove('open');
+      }
+    });
+  }
+  header.querySelectorAll('[data-lang-switcher]').forEach(function(block) {
+    var curr = block.querySelector('.curr');
+    var other = block.querySelector('.other');
+    if (!curr || !other) return;
+    curr.addEventListener('click', function(e) {
+      e.stopPropagation();
+      other.classList.toggle('active');
+    });
+    document.addEventListener('click', function() { other.classList.remove('active'); });
+    other.addEventListener('click', function(e) { e.stopPropagation(); });
+  });
+})();
+</script>

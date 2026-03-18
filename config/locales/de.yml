@@ -1,0 +1,32 @@
+de:
+  nav:
+    about_us: "Über Shivat Zion"
+    aliyah_einstein: "Aliyah-Unterstützungsleistungen"
+    faqs: "Häufige Fragen (FAQ)"
+    pro_match: "Liste von Fachkräften"
+    news: "Neuigkeiten"
+    help_center: "Kontakt"
+    explore: "Entdecken"
+    get_in_touch: "Kontakt"
+    donate: "Spenden"
+    url_about_us: "https://shivat-zion.com/de/ueber-shivat-zion/"
+    url_aliyah_einstein: "https://shivat-zion.com/de/informationsportal/"
+    url_faqs: "https://shivat-zion.com/de/faq/"
+    url_pro_match: "https://shivat-zion.com/de/liste-von-fachkraften/"
+    url_news: "https://shivat-zion.com/news/"
+    url_help_center: "https://shivat-zion.com/de/kontakt/"
+
+  footer:
+    terms_privacy: "AGB & Datenschutz"
+    url_terms_privacy: "https://shivat-zion.com/de/agb-datenschutz"
+    all_rights_reserved: "© %{year} Shivat Zion. Alle Rechte vorbehalten."
+    explore: "Entdecken"
+    connect: "Verbinden"
+    get_in_touch: "Kontakt"
+    facebook: "Facebook"
+    tiktok: "TikTok"
+    linkedin: "LinkedIn"
+    instagram: "Instagram"
+
+  header:
+    open_menu: "Menü öffnen"
