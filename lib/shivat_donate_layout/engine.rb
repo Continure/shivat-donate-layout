@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "rails/engine"
+require "shivat_donate_layout/application_helper"
 
 module ShivatDonateLayout
   class Engine < ::Rails::Engine
