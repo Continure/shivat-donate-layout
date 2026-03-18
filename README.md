@@ -20,7 +20,9 @@ bundle install
 
 ## Usage
 
-### 1. Подключите хелперы в `ApplicationHelper`
+### 1. Подключите хелперы в `ApplicationHelper` (обязательно)
+
+Без этого шага будет ошибка `undefined method 'shivat_donate_layout_header'`.
 
 ```ruby
 # app/helpers/application_helper.rb
@@ -33,6 +35,7 @@ end
 
 ### 2. Добавьте шапку и футер в layout
 
+ERB:
 ```erb
 <!-- app/views/layouts/application.html.erb -->
 <body>
@@ -42,6 +45,16 @@ end
   </main>
   <%= shivat_donate_layout_footer %>
 </body>
+```
+
+HAML:
+```haml
+/ app/views/layouts/application.html.haml
+%body
+  = shivat_donate_layout_header
+  %main
+    = yield
+  = shivat_donate_layout_footer
 ```
 
 Альтернатива — прямой рендер партиалов (подключение хелперов в `ApplicationHelper` всё равно обязательно):
