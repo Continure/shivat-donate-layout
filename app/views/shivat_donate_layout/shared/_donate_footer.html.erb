@@ -126,27 +126,29 @@
       <%= link_to t('footer.terms_privacy'), t('footer.url_terms_privacy'), class: "link" %>
       <p class="c"><%= t('footer.all_rights_reserved', year: Date.current.year) %></p>
     </section>
+
     <section class="links-col col-s">
       <p class="col-title"><%= t('footer.explore') %></p>
-      <%= link_to t('nav.about_us'), t('nav.url_about_us') %>
-      <%= link_to t('nav.aliyah_einstein'), t('nav.url_aliyah_einstein') %>
-      <%= link_to t('nav.faqs'), t('nav.url_faqs') %>
-      <%= link_to t('nav.pro_match'), t('nav.url_pro_match') %>
-      <% if I18n.locale == :en %>
-        <%= link_to t('nav.news'), t('nav.url_news') %>
-      <% end %>
-      <%= link_to t('nav.help_center'), t('nav.url_help_center') %>
+      <%= link_to t('nav.aliyah_to_carmay_hanadiv'), t('nav.url_aliyah_to_carmay_hanadiv') %>
+      <%= link_to t('nav.find_me_a_professional'), t('nav.url_find_me_a_professional') %>
+      <%= link_to t('nav.oleh_budget_calculator'), t('nav.url_oleh_budget_calculator') %>
+      <%= link_to t('nav.my_aliyah_plan'), t('nav.url_my_aliyah_plan') %>
+      <%= link_to t('nav.my_pilot_trip'), t('nav.url_my_pilot_trip') %>
+      <%= link_to t('nav.about_us_hebrew'), t('nav.url_about_us_hebrew') %>
     </section>
+
     <section class="links-col col-t">
       <p class="col-title"><%= t('footer.connect') %></p>
-      <%= link_to t('footer.facebook'), "https://www.facebook.com/p/Shivat-Zion-Aliyah-Klita-100077800172568/" %>
-      <%= link_to t('footer.tiktok'), "https://www.tiktok.com/@shivat.zion.aliya" %>
-      <%= link_to t('footer.linkedin'), "https://www.instagram.com/shivat_zion/" %>
-      <%= link_to t('footer.instagram'), "https://www.linkedin.com/company/shivat-zion-aliyah-klita/" %>
+      <%= link_to t('footer.facebook'), t('footer.url_facebook') %>
+      <%= link_to t('footer.instagram'), t('footer.url_instagram') %>
+      <%= link_to t('footer.tiktok'), t('footer.url_tiktok') %>
+      <%= link_to t('footer.linkedin'), t('footer.url_linkedin') %>
     </section>
+
     <section class="links-col col-fo">
       <p class="col-title"><%= t('footer.get_in_touch') %></p>
-      <%= link_to t('nav.help_center'), t('nav.url_help_center') %>
+      <%= link_to t('nav.help_center_footer'), t('nav.url_help_center') %>
+      <%= link_to t('nav.about_us'), t('nav.url_about_us') %>
     </section>
   </div>
 </footer>
