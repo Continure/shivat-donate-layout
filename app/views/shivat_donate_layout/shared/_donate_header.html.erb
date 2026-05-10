@@ -330,29 +330,50 @@
       </div>
     </div>
 
+    <div class="col">
+      <a href="#" class="search-btn" id="open-chat-mobile">
+        <%= t('nav.how_can_we_assist_you_today') %>
+      </a>
+
+      <a href="<%= t('nav.url_aliyah_einstein') %>" class="search-btn">
+        <%= t('nav.aliyah_einstein') %>
+      </a>
+    </div>
+
+    <!-- Actions -->
+    <div class="col">
+      <a href="#" class="search-btn" id="open-chat-mobile">
+        {{ ask_any_text }}
+      </a>
+
+      <a href="{{ info_hub_url }}" class="search-btn">
+        {{ info_hub_text }}
+      </a>
+    </div>
+
     <!-- Column: Explore -->
     <div class="col">
       <h3 class="col-title"><%= t('nav.explore') %></h3>
       <%= link_to t('nav.aliyah_to_carmay_hanadiv'), t('nav.url_aliyah_to_carmay_hanadiv'), class: "link" %>
       <%= link_to t('nav.pro_match'), t('nav.url_pro_match'), class: "link" %>
-      <%= link_to t('nav.find_me_a_professional'), t('nav.url_find_me_a_professional') %>
-      <%= link_to t('nav.oleh_budget_calculator'), t('nav.url_oleh_budget_calculator') %>
-      <%= link_to t('nav.my_aliyah_plan'), t('nav.url_my_aliyah_plan') %>
-      <%= link_to t('nav.my_pilot_trip'), t('nav.url_my_pilot_trip') %>
+      <%= link_to t('nav.find_me_a_professional'), t('nav.url_find_me_a_professional'), class: "link" %>
+      <%= link_to t('nav.oleh_budget_calculator'), t('nav.url_oleh_budget_calculator'), class: "link" %>
+      <%= link_to t('nav.my_aliyah_plan'), t('nav.url_my_aliyah_plan'), class: "link" %>
+      <%= link_to t('nav.my_pilot_trip'), t('nav.url_my_pilot_trip'), class: "link" %>
     </div>
 
     <div class="col">
       <h3 class="col-title"><%= t('nav.get_in_touch') %></h3>
-      <%= link_to t('nav.help_center_footer'), t('nav.url_help_center') %>
-      <%= link_to t('nav.about_us'), t('nav.url_about_us') %>
+      <%= link_to t('nav.help_center_footer'), t('nav.url_help_center'), class: "link" %>
+      <%= link_to t('nav.about_us'), t('nav.url_about_us'), class: "link" %>
     </div>
 
     <div class="col">
       <p class="col-title"><%= t('footer.connect') %></p>
-      <%= link_to t('footer.facebook'), t('footer.url_facebook') %>
-      <%= link_to t('footer.instagram'), t('footer.url_instagram') %>
-      <%= link_to t('footer.tiktok'), t('footer.url_tiktok') %>
-      <%= link_to t('footer.linkedin'), t('footer.url_linkedin') %>
+      <%= link_to t('footer.facebook'), t('footer.url_facebook'), class: "link" %>
+      <%= link_to t('footer.instagram'), t('footer.url_instagram'), class: "link" %>
+      <%= link_to t('footer.tiktok'), t('footer.url_tiktok'), class: "link" %>
+      <%= link_to t('footer.linkedin'), t('footer.url_linkedin'), class: "link" %>
     </div>
 
   </div>
