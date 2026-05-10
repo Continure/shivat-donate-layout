@@ -2,7 +2,7 @@ it:
   nav:
     about_us: "Chi Siamo"
     about_us_hebrew: "אודות שיבת ציון"
-    aliyah_einstein: "Aliyah e Vita in Israele"
+    aliyah_einstein: "Centro Informazioni Aliyah"
     faqs: "Domande Frequenti (FAQ)"
     pro_match: "Elenco Professionisti"
     news: "Notizie"
@@ -14,7 +14,7 @@ it:
     donate_btn_url: "https://donate.shivat-zion.com/?locale=it"
     url_about_us: "https://shivat-zion.com/it/cose-shivat-zion/"
     url_about_us_hebrew: "https://shivat-zion.com/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%a9%d7%99%d7%91%d7%aa-%d7%a6%d7%99%d7%95%d7%9f/"
-    url_aliyah_einstein: "https://shivat-zion.com/it/portale-informativo/"
+    url_aliyah_einstein: "https://shivatzion-support.freshdesk.com/it/support/home"
     url_faqs: "https://shivat-zion.com/it/faq/"
     url_pro_match: "https://shivat-zion.com/it/elenco-dei-professionisti/"
     url_news: "https://shivat-zion.com/news/"
